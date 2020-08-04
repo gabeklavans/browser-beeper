@@ -37,3 +37,9 @@ function buttonHandler(freq) {
         console.log("Starting!");
     }
 }
+
+const volumeControl = document.querySelector('#volume');
+
+volumeControl.addEventListener('input', function() {
+    gainNode.gain.value = this.value;
+}, false);
